@@ -1,4 +1,6 @@
-# Core Concepts
+# Hello World App
+This app asks the user for his/her name then prints a greeting.
+## Core Concepts
 ### Calling Functions
 Functions are called with parentheses and the parameters in the paraentheses.
 e.g. 
