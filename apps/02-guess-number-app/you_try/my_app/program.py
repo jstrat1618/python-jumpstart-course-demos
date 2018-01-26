@@ -6,7 +6,7 @@ print('-----------------------------------------')
 print()
 
 
-the_num = random.randint(0,50)
+the_num = random.randint(0,100)
 
 user_int = -1
 
