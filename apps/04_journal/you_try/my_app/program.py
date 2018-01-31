@@ -20,7 +20,7 @@ def run_event_loop():
     journal_name = "Default"
     journal_data = journal.load_journal(journal_name)
     cmd = "x"
-    while cmd.lower() != "e":
+    while cmd.lower() != "e" and cmd:
         user_cmd = input("[L]ist entries, [A]dd entries, [E]xit? ")
         cmd = user_cmd.lower().strip()
 
@@ -29,11 +29,11 @@ def run_event_loop():
         elif cmd == "a":
             add_entry(journal_data)
 
-        elif cmd == "e":
+        elif cmd == "e" or not cmd:
             print("Goodbye!")
             journal.save_journal(journal_name, journal_data)
         else:
-            print("Sorry, we didn't understand the input '{}.'".format(user_cmd))
+            print("Sorry, we didn't understand the input '{}'.".format(user_cmd))
 
 
 def print_header():
