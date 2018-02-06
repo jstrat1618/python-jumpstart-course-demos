@@ -42,5 +42,8 @@ def print_header():
     print("----------------------------------")
 
 
+#print("__name__ in program.py = " + __name__)
+#print("__file__ in program.py = " + __file__)
+
 if __name__ == '__main__':
     main()
