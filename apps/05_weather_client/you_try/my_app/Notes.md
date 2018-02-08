@@ -55,6 +55,8 @@ WeatherReport = collections.namedtuple("WeatherReport", "condition, temp, scale,
 report = WeatherReport(temp=72, condition="Cloudy", scale="F", location="El Paso")    
 report.loc #returns "El Paso"
 
-
+## Core Concept: Virtual Environments
+Virtual environments allow you to create isolated environments dedicated to your application.
+Initially, your environment is empty, but you can install and update the environment as you develop your application
 
 
