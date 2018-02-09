@@ -11,8 +11,7 @@ def main():
     # get cats from internet
     download_cats(folder)
     # display cats
-    myfoler = os.path.abspath(folder)
-    show_cats(myfoler)
+    show_cats(folder)
 
 
 def print_header():
@@ -30,6 +29,7 @@ def get_output_folder():
         print('Creating New Directory at {}.'.format(full_path))
         os.mkdir(full_path)
 
+    full_path = os.path.abspath(folder)
     return full_path
 
 def download_cats(folder):
