@@ -16,12 +16,16 @@ def main():
     #search
     matches = search_folder(folder, text)
     #return output
+    match_count = 0
     for m in matches:
-        print("----------MATCH----------")
-        print("File : {}".format(m.file))
-        print("Line : {}".format(m.line))
-        print("Text : {}".format(m.text.strip()))
-        print()
+        match_count += 1
+        #print("----------MATCH----------")
+        #print("File : {}".format(m.file))
+        #print("Line : {}".format(m.line))
+        #print("Text : {}".format(m.text.strip()))
+        #print()
+
+    print("Found {} matches".format(match_count))
 
 
 def get_folder_from_user():
@@ -51,13 +55,10 @@ def search_folder(folder, text):
     for item in items:
         full_item = os.path.join(folder, item)
         if os.path.isdir(full_item):
-            matches = search_folder(full_item, text)
-            all_matches.extend(matches)
-        else:
-            matches = search_file(full_item, text)
-            all_matches.extend(matches)
+            yield from search_folder(full_item, text)
 
-    return all_matches
+        else:
+            yield from search_file(full_item, text)
 
 
 def search_file(filename, text):
