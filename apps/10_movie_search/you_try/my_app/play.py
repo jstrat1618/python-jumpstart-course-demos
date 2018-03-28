@@ -41,3 +41,19 @@ movies = [MovieResult(**md) for md in movie_list]
 print("Found {} movies".format(len(movies)))
 for m in movies:
     print("{}--{}".format(m.title, m.year))
+
+
+def add(*arg_vars):
+    #put all the *args into a list
+    x = [dum for dum in arg_vars]
+    return sum(x)
+
+print("The sum of these number is {}".format(add(1,2,3)))
+
+def print_kwargs(**kwargs):
+    for key, value in kwargs.items():
+        print("The {} is {}".format(key, value))
+
+print()
+print("Printing kwargs")
+print_kwargs(x = 'X', y = 'Y', z="Z", this_var = 'python!')
