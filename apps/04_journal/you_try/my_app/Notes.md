@@ -14,7 +14,7 @@ The syntax of a for in loop is similar. Start with the keyword "for", a dummy va
 You can use the reverse function to reverse iterable data structures. For example if we wanted to print out the entries in a list called my_list in reverse order, we could call a for in loop and iterate through reverse(my_list).
 
 ### tuples
-tuples are non-iterable data structures. You can define a tuple with parentheses. For example:   
+tuples are immutable data structures. You can define a tuple with parentheses. For example:   
 "my_tuple = (1,2)" defines a two dimensional tuple "my_tuple" whose first and second elements are 1 and 2 respectively. You can unpack a tuple easily by using a ",". For example,    
 x,y = my_tuple defines x as 1 and y as 2
 
